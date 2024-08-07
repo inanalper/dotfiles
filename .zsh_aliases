@@ -1,15 +1,15 @@
 case "$(uname -s)" in
-    Linux*)
-        alias pbcopy='xsel --clipboard --input'
-        alias pbpaste='xsel --clipboard --output'
-        alias rm='rm --preserve-root -i'
-        ;;
+	Linux*)
+		alias pbcopy='xsel --clipboard --input'
+		alias pbpaste='xsel --clipboard --output'
+		alias rm='rm --preserve-root -i'
+		;;
 
-    Darwin*)
-        # needs gnu coreutils
-        alias ls='gls'
-        alias rm='rm -i'
-        ;;
+	Darwin*)
+		# needs gnu coreutils
+		alias ls='gls'
+		alias rm='rm -i'
+		;;
 esac
 
 alias cd..='cd ..'
@@ -35,11 +35,13 @@ alias db='docker build -t'
 alias dx='docker exec -i -t'
 alias dp='docker ps'
 alias dpa='docker ps -a'
-alias dcl='docker system prune --all --force --volumes'
+alias dockerclean='docker system prune --all --force --volumes'
+alias dcup='find ~/docker -maxdepth 2 -type f -name "docker-compose.yml" -exec sh -c '\''cd "$(dirname "{}")" && docker compose ps | grep -q "Up " && docker compose pull && docker compose up -d'\'' \;'
 
 alias gr='go run'
 alias gb='go build -v'
 alias gmi='go mod init'
 alias gmt='go mod tidy'
-alias gcl='go clean -testcache -modcache -fuzzcache -cache'
+alias goclean='go clean -testcache -modcache -fuzzcache -cache'
 
+alias "??"='gh copilot suggest -t shell'

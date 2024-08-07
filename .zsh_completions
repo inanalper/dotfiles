@@ -1,0 +1,15 @@
+completions=(
+	"minikube completion zsh"
+	"thefuck --alias"
+	"stripe completion --shell zsh --write-to-stdout"
+)
+
+for cmd in "${completions[@]}"; do
+	exec=${cmd%% *}
+	args=${cmd#* }
+
+	command -v $exec &> /dev/null && _evalcache $exec $args
+done
+
+[ -f ~/projects/sdk/completion.zsh.inc ] && . ~/projects/sdk/completion.zsh.inc
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
