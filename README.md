@@ -5,7 +5,7 @@ contains my personal collection of dotfiles
 ## Installation
 
 ```sh
-git clone https://github.com/cemulus/dotfiles.git
+git clone ...
 
 cd dotfiles/
 
