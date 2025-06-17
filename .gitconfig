@@ -37,6 +37,8 @@
 	remotes = remote --verbose
 	whoami = config user.email
 	contrib = shortlog --summary
+[user]
+	name = inanalper
 
 #[url "ssh://git@github.com/"]
 #	insteadOf = https://github.com/
