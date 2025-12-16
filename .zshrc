@@ -10,7 +10,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
 	git
 	fasd
-	fzf
 	shrink-path
 	docker
 	kubectl
@@ -32,8 +31,8 @@ source ~/.zsh_completions
 
 # Custom prompt
 PROMPT="%(?:%{$fg_bold[green]%}%n:%{$fg_bold[red]%}%n)"
-if [ $IS_REMOTE_MACHINE -eq 1 ]; then
-	PROMPT+='%{$reset_color%}@%{$fg_bold[blue]%}%m'
+if (( IS_REMOTE_MACHINE == 1 )); then
+  PROMPT+='%{$reset_color%}@%{$fg_bold[blue]%}%m'
 fi
 PROMPT+=' %{$fg[blue]%}$(shrink_path -f -3)%{$reset_color%} $(git_prompt_info)'
 # RPROMPT='$(git_prompt_status)'
