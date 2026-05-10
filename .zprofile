@@ -24,8 +24,5 @@ case "$(uname -s)" in
 esac
 export HOMEBREW_NO_ANALYTICS=1
 
-# fzf
-export FZF_DEFAULT_OPTS="--extended"
-
 # gcloud
 [ -f ~/projects/sdk/path.zsh.inc ] && . ~/projects/sdk/path.zsh.inc
