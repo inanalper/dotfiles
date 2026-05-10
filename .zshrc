@@ -9,19 +9,15 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins: 	$ZSH_CUSTOM/plugins/
 plugins=(
 	git
-	fasd
-	fzf
 	shrink-path
 	docker
 	kubectl
-	golang
 	colored-man-pages
 	zsh-completions
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	you-should-use
 	gh
-	aws
 	evalcache
 )
 
